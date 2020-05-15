@@ -1,5 +1,82 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+<title>My Portfolio</title>
+<style>
+
+body {
+font-weight: normal;
+font-family: Arial, Sans-serif;
+color: #000000;
+text-align: left;
+}
+
+h1 {
+font-size: 140%
+font-weight: bold;
+color: #0000ff;
+text-align: center;
+}
+
+h2 {
+font-size: 120%
+font-weight: bold;
+color:#DC143C;
+text-align: left;
+}
+
+h3 {
+font: Courier New, monospace;
+font-size: 120%
+font-weight: normal;
+color: #FFB6C1;
+text-align: left;
+}
+
+h4 {
+font: Georgia, serif;
+font-size: 120%
+font-weight: normal;
+color: #000080;
+background-color: gray;
+text-align: left;
+}
+
+.lists {
+border: solid darkred;
+margin: 1%;
+padding: 1%;
+width: 40%;
+}
+
+#leftlist {
+  background: #ffff00;
+  position: fixed;
+  left: +50px;
+  }
+
+#rightlist {
+  background: #add8e6;
+  position: fixed;
+  right: +50px;
+  }
+
+  .bottom-text {
+		border: blue;
+		margin: 2%;
+		padding: 2%;
+		}
+
+	#btext {
+		position: absolute;
+		left: +20px;
+		}
+
+
+</style>
+</head>
+
 <body>
   <p><a href="#RequiredProjects">Skip to main content</a></p>
 <h1>My Portfolio</h1>
@@ -8,7 +85,9 @@
 <h2>My Projects</h2>
   <p>My Projects will showase both required projects and creative projects.</p>
 
+  <div class="lists" id="leftlist">
 <h3>Required Projects</h3>
+
   <ul>
     <li>Graphics</li>
       <ul>
@@ -25,7 +104,8 @@
       <a href="portfolio_amyKolb\portfolio_amyKolb.index.html">Unit Five:Formating Web Pages </a>
   </ul>
 
-<h3>My Sites</h3>
+  <div class="lists" id="rightlist">
+<h4>My Sites</h4>
   <ol>
     <li>First Website
       <ul>
@@ -37,6 +117,12 @@
     <li>Second Website</li>
     <li>Third Website</li>
   </ol>
+
+  <div class="bottom-text" id="btext">
+  <p><a href="#Ordered_Lists">Return to Top</a></p>
+  <p>For more information on any of the above activities, contact <u>John Doe</u> at <a href="mailto:amybkolb@gmail.Community ">Amy Kolb </a> </p></div>
+
+
 
 </body>
 </html>
