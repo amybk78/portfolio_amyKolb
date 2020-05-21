@@ -24,26 +24,24 @@ color:#DC143C;
 }
 
 .lists {
-border: solid darkred;
+border: solid dark purple;
 margin: 1%;
 padding: 1%;
 width: 40%;
 }
 
 #bikes {
-  background: #ffff00;
+  background: #9E55CA;
   left: +50px;
   }
 
 
-    #table1  {
+  #table1  {
       background: #D8BFD8;
       border: 15px solid #EE82EE;
       height: 40px;
       font-family: "Palatino Linotype";
       font-size: 20px;
-      letter-spacing: 2px;
-      word-spacing: 2px;
       color: #07000A;
       font-weight: normal;
       width:80%
@@ -58,7 +56,7 @@ width: 40%;
     }
 
     .topnav {
-      background-color: #333;
+      background-color: #360456;
       overflow: hidden;
     }
 
@@ -84,39 +82,46 @@ width: 40%;
   </div>
 
 <h1>My Hobby</h1>
-  <p>My Hobby is a website dedicated to showcasing what I do for fun.</p>
+  <p>Showcasing what I do for fun.</p>
 
 <h1>My Rides</h1>
-  <Table id="table1" style: float left;>
+  <Table id="table1">
     <thead>
       <tr>
-      <td colspan = "4">My Motorcycle Routes</td>
+      <td style="">My Motorcycle Routes</td>
       </tr>
+      <tr>
+      <th>&nbsp;</th>
+    </tr>
     </thead>
     <tr>
-      <th id="th" style: float left;>Start Point</th>
-      <th id="th" style: float left;>Destination</th>
+      <td style="font-weight: bold">Start Point</td>
+      <td style="font-weight: bold">Destination</td>
+      <td style="font-weight: bold">Rest Stop</td>
     </tr>
     <tr>
       <td>A1A Melbourne</td>
       <td>Cape Canaveral</td>
+      <td>Gator's Dockside</td>
     </tr>
     <tr>
       <td>Sebastian, FL</td>
       <td>Indian River Drive</td>
+      <td>Crab Stop</td>
     </tr>
     <tr>
       <td>Tropical Trail</td>
       <td>Cocoa Village</td>
+      <td>Ryan's Pizza</td>
     </tr>
 </table>
 <br>
 
 <h1>My Bikes</h1>
-  <p>My Bikes will showase bikes I own.</p>
+
 
   <div class="lists" id="bikes">
-    <table width="100px" height="80%" border="1">
+    <table width="90px" height="80%" border="1">
         <tr>
            <td>
              <a href="C:\Users\Ava\github\portfolio_amyKolb\images\blackrr.jpg" target="_blank"><img src="C:\Users\Ava\github\portfolio_amyKolb\images\blackrr.jpg" alt="Black Honda" style="width:200px;height:200px;"/> </a>
@@ -127,8 +132,8 @@ width: 40%;
            </tr>
            <tr>
               <td>
-             <a href="C:\Users\Ava\github\portfolio_amyKolb\images\honda.jpg" target="_blank"><img src="C:\Users\Ava\github\portfolio_amyKolb\images\honda.jpg" alt="Honda Shadow" style="width:200px;height:200px;"/> </a>
-              </td>
+             <a href="C:\Users\Ava\github\portfolio_amyKolb\images\honda.jpg" target="_blank"><img src="C:\Users\Ava\github\portfolio_amyKolb\images\honda.jpg" alt="Honda Shadow" style="width:100px;height:150px;"/> </a>
+           </td>
               <td>
               My Honda Shadow.
               </td>
@@ -138,21 +143,30 @@ width: 40%;
 
   <p>Enter your name to join the email list, then click "Submit" to submit the form:</p>
 
-           <form id="frm1" action="/action_page.php">
-             First name: <input type="text" name="fname"><br>
-             Last name: <input type="text" name="lname"><br><br>
-             email: <input type="text" email="email">
-             <input type="button" onclick="myFunction()" value="Submit">
+           <form id="frm1">
+             First name: <input type="text" id="fname"><br />
+             Last name: <input type="text" id="lname"><br />
+             Email: <input type="text" id="email">
+             <input type="button" onclick="submitForm()" value="Submit">
            </form>
+         <br /> <br />
 
-    <script>
-           function myFunction() {
-             document.getElementById("frm1").submit();
+         <div id="output"></div>
+
+         <script>
+            function submitForm() {
+             var firstName = document.getElementById("fname").value;
+             var lastName = document.getElementById("lname").value;
+             var email = document.getElementById("email").value;
+
+            var sentence = "Your name is " + firstName + " " + lastName + " and your email is " + email + ".";
+            document.getElementById("output").innerText = sentence;
            }
-           </script>
+        </script>
 
 
 </div>
+<br>
 <br>
 <h1>Contact</h1>
 <div class="contact" id="contact">For more information, contact <u>Amy Kolb</u> at <a href="mailto:amybkolb@gmail.Community ">Amy Kolb </a>
