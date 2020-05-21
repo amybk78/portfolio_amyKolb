@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Challenge: Mad Libs</title>
+ </head>
+ <body>
+
+    <h1>Mad Libs</h1>
+
+    <ul>
+      <li>A person’s first name: <input type="text" id="noun1"></li>
+      <li>The name of a class or subject: <input type="text" id="noun2"></li>
+      <li>An object: <input type="text" id="noun3"></li>
+      <li>The name of a class activity that begins with a consonant: <input type="text" id="noun4"></li>
+      <li>An individual or group: <input type="text" id="pronoun1"></li>
+      <li>A person’s title: <input type="text" id="noun5"></li>
+      <li>An individual or group: <input type="text" id="pronoun2"></li>
+      <li>An individual or group: <input type="text" id="pronoun3"></li>
+    </ul>
+
+    <button id="lib-button">Lib it!</button>
+
+//<noun1> is taking an online course on <noun2>. 
+  //During the course, a <noun3> and a  <noun4> confused <pronoun1>.
+  //The <noun5> said that this affected <pronoun2>,
+  //so <pronoun3> forgot about it.
+
+    <p>Generated story:
+    <span id="story"></span>
+    </p>
+
+    <script>
+        var libButton = document.getElementById('lib-button');
+        var libIt = function() {
+            var storyDiv = document.getElementById("story");
+            storyDiv.innerHTML = "??Your story here";
+        };
+        libButton.addEventListener('click', libIt);
+
+    </script>
+
+ </body>
+</html>
