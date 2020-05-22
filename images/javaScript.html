@@ -19,24 +19,33 @@
       <li>An individual or group: <input type="text" id="pronoun3"></li>
     </ul>
 
-    <button id="lib-button">Lib it!</button>
+    <button id="lib-button" onclick = "libIt()">Lib it!</button>
 
-//<noun1> is taking an online course on <noun2>. 
-  //During the course, a <noun3> and a  <noun4> confused <pronoun1>.
-  //The <noun5> said that this affected <pronoun2>,
-  //so <pronoun3> forgot about it.
 
     <p>Generated story:
     <span id="story"></span>
     </p>
 
     <script>
-        var libButton = document.getElementById('lib-button');
-        var libIt = function() {
+          var libIt = function() {
+          var noun1  = document.getElementById("noun1").value;
+          var noun2  = document.getElementById("noun2").value;
+          var noun3  = document.getElementById("noun3").value;
+          var noun4  = document.getElementById("noun4").value;
+          var pronoun1  = document.getElementById("pronoun1").value;
+          var noun5  = document.getElementById("noun5").value;
+          var pronoun2  = document.getElementById("pronoun2").value;
+          var pronoun3  = document.getElementById("pronoun3").value;
+
+          var lib = noun1 + " is taking an online course on " + noun2 + ". \n";
+          lib = lib + "During the course, a " + noun3 + " and a " + noun4 + " confused " + pronoun1 + ". \n";
+          lib = lib + "The " + noun5 + " said that this affected " + pronoun2 + ", so " + pronoun3 + " forgot about it.\n";
+
+
             var storyDiv = document.getElementById("story");
-            storyDiv.innerHTML = "??Your story here";
-        };
-        libButton.addEventListener('click', libIt);
+            storyDiv.innerHTML = lib;
+      };
+
 
     </script>
 
