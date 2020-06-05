@@ -1,0 +1,41 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<title>Multiplication Table</title>
+
+	</head>
+	<body>
+		<h1>Make a Matrix</h1>
+		<script>
+		  	var rows = prompt("How many rows for your table?");
+		  	var cols = prompt("How many columns for your table?");
+
+			if(rows == "" || rows == null) {
+				rows = 10;
+			}
+			if(cols== "" || cols== null) {
+				cols = 10;
+			}
+
+			createTable(rows, cols);
+
+			function createTable(rows, cols) {
+				var j=1;
+				var tableDef = "<table border='1' width='500'>";
+
+				for(i=1; i<=rows; i++) {
+					tableDef = tableDef + "<tr>";
+					while(j <= cols) {
+						tableDef = tableDef + "<td>" + i*j + "</td>";
+						j = j + 1;
+					}
+					tableDef = tableDef + "</tr>";
+					j = 1;
+				}
+
+				tableDef = tableDef + "</table>";
+				document.write(tableDef);
+			}
+		</script>
+	</body>
+</html>
